@@ -43,8 +43,19 @@ function MainContent() {
     return ( <h1>I'am learning React</h1>)
 }
 
-ReactDOM.render(<h1>Hello, Clube Siga!</h1>, document.getElementById("root"))
+const navbar = (
+    <nav>
+        <h1>Bob's Rede WE2M</h1>
+        <ul>
+            <li>Menu</li>
+            <li>Pricing</li>
+            <li>About</li>
+        </ul>
+    </nav>
+)
 
+ReactDOM.render(<h1>Hello, Clube Siga!</h1>, document.getElementById("root"))
+/*
 ReactDOM.render(
     <ul>
         <li>Thing 1</li>
@@ -65,4 +76,10 @@ ReactDOM.render(
         <MainContent />
     </div>,
     document.getElementById('maincontent')
+)
+*/
+
+ReactDOM.render(
+    navbar,
+    document.getElementById('root')
 )
