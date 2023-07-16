@@ -39,6 +39,10 @@ function Navbar() {
     )
 }
 
+function MainContent() {
+    return ( <h1>I'am learning React</h1>)
+}
+
 ReactDOM.render(<h1>Hello, Clube Siga!</h1>, document.getElementById("root"))
 
 ReactDOM.render(
@@ -54,4 +58,11 @@ ReactDOM.render(
         <Navbar />
     </div>,
     document.getElementById('navbar')
+)
+
+ReactDOM.render(
+    <div>
+        <MainContent />
+    </div>,
+    document.getElementById('maincontent')
 )
