@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "./components/Navbar"
+import Navbar from "components/Navbar"
 /*
 Challenge: Build the Navbar component.
 Check the Figma file for the design specifics.
