@@ -30555,6 +30555,9 @@ if (process.env.NODE_ENV === 'production') {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 exports.default = Meme;
 
 var _react = __webpack_require__(1);
@@ -30568,30 +30571,25 @@ var _memesData2 = _interopRequireDefault(_memesData);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Meme() {
+    var _React$useState = _react2.default.useState(""),
+        _React$useState2 = _slicedToArray(_React$useState, 2),
+        memeImage = _React$useState2[0],
+        setMemeImage = _React$useState2[1];
     /**
-     * Challenge: Get a random image from the `memesData` array
-     * when the "new meme image" button is clicked.
-     * 
-     * Log the URL of the image to the console. (Don't worry
-     * about displaying the image yet)
+     * Challenge: Save the random meme URL in state
+     * - Below the div.form, add an <img /> and set the
+     *   src to the new `memeImage` state you created
      */
-    var url = void 0;
 
     function getMemeImage() {
         var memesArray = _memesData2.default.data.memes;
         var randomNumber = Math.floor(Math.random() * memesArray.length);
-        url = memesArray[randomNumber].url;
-        console.log(url);
+        setMemeImage(memesArray[randomNumber].url);
     }
 
     return _react2.default.createElement(
         "main",
         null,
-        _react2.default.createElement(
-            "p",
-            null,
-            url
-        ),
         _react2.default.createElement(
             "div",
             { className: "form" },
@@ -30613,7 +30611,8 @@ function Meme() {
                 },
                 "Get a new meme image \uD83D\uDDBC"
             )
-        )
+        ),
+        _react2.default.createElement("img", { src: memeImage, className: "meme--image" })
     );
 }
 
@@ -30913,7 +30912,7 @@ exports.default = {
         }, {
             "id": "124055727",
             "name": "Y'all Got Any More Of That",
-            "url": "https://i.imgflip.com/21uy0f.jpg",
+            "url": "https://i.imgflip.com/1h7in3.jpg",
             "width": 600,
             "height": 471,
             "box_count": 2
@@ -30941,7 +30940,7 @@ exports.default = {
         }, {
             "id": "135678846",
             "name": "Who Killed Hannibal",
-            "url": "https://i.imgflip.com/28s2gu.jpg",
+            "url": "https://i.imgflip.com/1e7ql7.jpg",
             "width": 1280,
             "height": 1440,
             "box_count": 3
@@ -31081,7 +31080,7 @@ exports.default = {
         }, {
             "id": "29617627",
             "name": "Look At Me",
-            "url": "https://i.imgflip.com/hmt3v.jpg",
+            "url": "https://i.imgflip.com/2hgfw.jpg",
             "width": 300,
             "height": 300,
             "box_count": 2
@@ -31200,7 +31199,7 @@ exports.default = {
         }, {
             "id": "29562797",
             "name": "I'm The Captain Now",
-            "url": "https://i.imgflip.com/hlmst.jpg",
+            "url": "https://i.imgflip.com/odluv.jpg",
             "width": 478,
             "height": 350,
             "box_count": 2
